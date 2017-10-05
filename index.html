@@ -10,12 +10,15 @@
 <body>
     <div class="container">
         <ul class="slider" id="slider">
-            <li class="slider-item" style="background: red"></li>
-            <li class="slider-item" style="background: blue"></li>
-            <li class="slider-item" style="background: pink"></li>
-            <li class="slider-item" style="background: green"></li>
-            <li class="slider-item" style="background: yellow"></li>
+            <li class="slider-item" style="background: red"></li><li
+            class="slider-item" style="background: blue"></li><li
+            class="slider-item" style="background: pink"></li><li
+            class="slider-item" style="background: green"></li><li
+            class="slider-item" style="background: yellow"></li>
         </ul>
     </div>
+    <script>
+        slider.innerHTML = slider.innerHTML + slider.innerHTML // copy
+    </script>
 </body>
 </html>
