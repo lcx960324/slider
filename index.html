@@ -9,16 +9,23 @@
 </head>
 <body>
     <div class="container">
-        <ul class="slider" id="slider">
-            <li class="slider-item" style="background: red"></li><li
+        <ul class="slider" id="slider"><li 
+            class="slider-item" style="background: red"></li><li
             class="slider-item" style="background: blue"></li><li
             class="slider-item" style="background: pink"></li><li
             class="slider-item" style="background: green"></li><li
-            class="slider-item" style="background: yellow"></li>
-        </ul>
+            class="slider-item" style="background: yellow"></li></ul>
+        <!-- 移除多余空格 防止 inline-block 间距 -->
     </div>
     <script>
         slider.innerHTML = slider.innerHTML + slider.innerHTML // copy
+        setInterval(function () {
+            if (slider.scrollLeft > slider.scrollWidth / 2) {
+                slider.scrollLeft = 0
+            } else {
+                slider.scrollLeft++
+            }
+        }, 5)
     </script>
 </body>
 </html>
