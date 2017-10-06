@@ -17,15 +17,18 @@
             class="slider-item" style="background: yellow"></li></ul>
         <!-- 移除多余空格 防止 inline-block 间距 -->
     </div>
+    <script src="slider.js"></script>
     <script>
-        slider.innerHTML = slider.innerHTML + slider.innerHTML // copy
-        setInterval(function () {
-            if (slider.scrollLeft > slider.scrollWidth / 2) {
-                slider.scrollLeft = 0
-            } else {
-                slider.scrollLeft++
-            }
-        }, 5)
+        // slider.innerHTML = slider.innerHTML + slider.innerHTML // copy
+        // setInterval(function () {
+        //     if (slider.scrollLeft > slider.scrollWidth / 2) {
+        //         slider.scrollLeft = 0
+        //     } else {
+        //         slider.scrollLeft++
+        //     }
+        // }, 5)
+        const slider = new Slider('slider')
+        slider.start()
     </script>
 </body>
 </html>
